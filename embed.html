@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>iFrame Content</title>
+  <script>
+    function tryAccessParent() {
+      // Check parent location access
+      let location;
+      try {
+        location = "Parent location: " + window.parent.location.href;
+      } catch (e) {
+        location = "Access to parent.location.href is blocked: " + e;
+      }
+      document.getElementById('location').innerText = location;
+
+      // Check storage access
+      let storage;
+      try {
+        storage = "Storage: " + localStorage.getItem('parentKey');
+      } catch (e) {
+        storage = "Access to localStorage.getItem('parentKey') is blocked: " + e;
+      }
+      document.getElementById('storage').innerText = storage;
+
+      // Check cookie access
+      let cookie;
+      try {
+        cookie = "Cookie: " + document.cookie;
+      } catch (e) {
+        cookie = "Access to document.cookie is blocked: " + e;
+      }
+      document.getElementById('cookie').innerText = cookie; 
+    }
+    window.onload = tryAccessParent;
+  </script>
+</head>
+<body>
+  <h3>This is the iframe content.</h3>
+  <p id="location">Testing parent access...</p>
+  <p id="storage">Testing storage access...</p>
+  <p id="cookie">Testing cookie access...</p>
+</body>
+</html>
