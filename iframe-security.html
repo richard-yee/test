@@ -15,7 +15,7 @@
     console.log('Parent localStorage:', localStorage.getItem('parentKey'));
   </script>
 
-  <h2>Embedded Asana Form (with access to cookies and current login from asana.com)</h1>
+  <h2>Embedded Asana Form (with allow-scripts allow-same-origin: asana.com)</h1>
   <iframe
     sandbox="allow-scripts allow-same-origin"
     src="https://form-beta.asana.com/?k=mJKQTR0HyxGIJ7l5-oIaeg&d=15793206719&embed=true"
@@ -24,7 +24,7 @@
     style="border: 1px solid #ccc;"
   ></iframe>
 
-  <h2>Test access to parent content (with allow-same-origin: glitch.me)</h1>
+  <h2>Test access to parent content (with allow-scripts allow-same-origin: glitch.me)</h1>
   <iframe
     sandbox="allow-scripts allow-same-origin"
     src="https://feather-thirsty-banon.glitch.me/embed.html"
@@ -32,8 +32,25 @@
     style="border: 1px solid #ccc;"
   ></iframe>
 
+  <h2>Test access to parent content (with allow-scripts allow-same-origin: github.io)</h1>
+  <iframe
+    sandbox="allow-scripts allow-same-origin"
+    src="https://richard-yee.github.io/test/embed.html"
+    width="100%"
+    style="border: 1px solid #ccc;"
+  ></iframe>
+
   <h2>Test access to parent content (with allow-same-origin: github.io)</h1>
   <iframe
+    sandbox="allow-same-origin"
+    src="https://richard-yee.github.io/test/embed.html"
+    width="100%"
+    style="border: 1px solid #ccc;"
+  ></iframe>
+
+  <h2>Test access to parent content (with no sandbox permissions added: github.io)</h1>
+  <iframe
+    sandbox=""
     src="https://richard-yee.github.io/test/embed.html"
     width="100%"
     style="border: 1px solid #ccc;"
