@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Embedded Sharepoint Excel</title>
+  </head>
+  <body>
+    <iframe 
+      src="https://asana-my.sharepoint.com/:x:/p/richardyee/IQCwaHgFZlwQQaJiQFgf5ZdcAcMOz-PmNlhpdiT385zLKeg?e=bcfVi1" 
+      width="1000" 
+      height="800" 
+      sandbox="allow-scripts allow-same-origin">
+    </iframe>
+  </body>
+</html>
